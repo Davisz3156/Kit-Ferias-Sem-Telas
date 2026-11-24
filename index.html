@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Kit Férias sem Telas | Squishies, Desenhos para Pintar e Brincadeiras Animadas</title>
+  <meta name="description" content="Tire seus filhos das telas nas férias com Squishies de papel para montar, desenhos atuais para pintar, brincadeiras animadas e 3 bônus exclusivos." />
+  <meta name="theme-color" content="#1D1A2B" />
+  <link rel="icon" type="image/png" sizes="64x64" href="imagens/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- =====================================================================
+       META PIXEL BASE (Descomente e substitua SEU_PIXEL_ID_AQUI)
+  ====================================================================== -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+  </script>
+  -->
+
+  <style>
+    :root {
+      --bg-dark: #1D1A2B;
+      --bg-card-dark: #27233A;
+      --bg-light: #FFFDF9;
+      --bg-soft: #F4EFE6;
+      --text-light: #FFFFFF;
+      --text-muted-dark: #C8C3DC;
+      --text-dark: #1E1B2E;
+      --text-muted-light: #57526E;
+      --accent-coral: #FF6B4A;
+      --accent-yellow: #FBBF24;
+      --accent-mint: #10B981;
+      --accent-mint-hover: #059669;
+      --accent-purple: #8B5CF6;
+      --border-dark: rgba(255, 255, 255, 0.12);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow-cta: 0 10px 25px -5px rgba(16, 185, 129, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-bottom: 74px; /* Espaço para barra fixa mobile */
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 760px;
+      }
+    }
+
+    /* TOP MARQUEE */
+    .marquee-bar {
+      background: var(--accent-yellow);
+      color: var(--text-dark);
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 9px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      border-bottom: 2px solid #EAB308;
+    }
+
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 24s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* HERO */
+    .hero {
+      padding: 26px 0 38px;
+      background: radial-gradient(circle at top center, #2D2747 0%, var(--bg-dark) 72%);
+      text-align: center;
+    }
+
+    .season-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 107, 74, 0.16);
+      border: 1px solid rgba(255, 107, 74, 0.45);
+      color: #FF9E87;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: 1.88rem;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .hero h1 span {
+      color: var(--accent-yellow);
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      color: var(--text-muted-dark);
+      margin-bottom: 22px;
+      font-weight: 500;
+    }
+
+    /* PILLARS BADGE GRID IN HERO */
+    .hero-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .pillar-box {
+      background: var(--bg-card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 12px 8px;
+      text-align: center;
+    }
+
+    .pillar-box .emoji {
+      font-size: 1.55rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .pillar-box strong {
+      display: block;
+      font-size: 0.78rem;
+      color: #FFFFFF;
+      line-height: 1.25;
+    }
+
+    .pillar-box span {
+      font-size: 0.68rem;
+      color: var(--accent-yellow);
+      font-weight: 700;
+    }
+
+    /* CTA BUTTON */
+    .btn-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: var(--accent-mint);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.08rem;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-cta);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+      text-align: center;
+    }
+
+    .btn-cta:hover, .btn-cta:active {
+      background: var(--accent-mint-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-cta small {
+      font-size: 0.75rem;
+      font-weight: 600;
+      opacity: 0.94;
+      margin-top: 2px;
+    }
+
+    .trust-strip {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 12px;
+      font-size: 0.76rem;
+      color: var(--text-muted-dark);
+      font-weight: 600;
+    }
+
+    /* LIGHT & SOFT SECTIONS */
+    .section-light {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      padding: 38px 0;
+    }
+
+    .section-soft {
+      background: var(--bg-soft);
+      color: var(--text-dark);
+      padding: 38px 0;
+    }
+
+    .section-dark {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 40px 0;
+    }
+
+    .section-title {
+      font-size: 1.55rem;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.94rem;
+      color: var(--text-muted-light);
+      margin-bottom: 22px;
+    }
+
+    .section-dark .section-subtitle {
+      color: var(--text-muted-dark);
+    }
+
+    /* PAIN STORY CARD */
+    .pain-box {
+      background: #FFFFFF;
+      border: 1px solid #E6E0D6;
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+      box-shadow: 0 6px 20px rgba(30, 27, 46, 0.05);
+    }
+
+    .pain-quote {
+      display: inline-block;
+      background: #FEE2E2;
+      color: #991B1B;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 5px 12px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .pain-box p {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      color: #2D2942;
+    }
+
+    .pain-box p:last-child {
+      margin-bottom: 0;
+      font-weight: 700;
+      color: var(--text-dark);
+      background: #FEF3C7;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+
+    /* INTERACTIVE TABS + CAROUSEL SHOWCASE */
+    .showcase-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tab-btn {
+      background: #FFFFFF;
+      border: 2px solid #E2DCD0;
+      color: var(--text-dark);
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 10px 6px;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      text-align: center;
+    }
+
+    .tab-btn .tab-emoji {
+      font-size: 1.25rem;
+    }
+
+    .tab-btn.active {
+      background: var(--bg-dark);
+      border-color: var(--bg-dark);
+      color: var(--accent-yellow);
+      box-shadow: 0 6px 14px rgba(29, 26, 43, 0.18);
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .panel-intro {
+      background: #FFFFFF;
+      border: 1px solid #E5DFD5;
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+
+    .panel-intro h3 {
+      font-size: 1.08rem;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .panel-intro p {
+      font-size: 0.86rem;
+      color: var(--text-muted-light);
+    }
+
+    /* CAROUSEL WRAPPER & FLOATING NAV ARROWS */
+    .carousel-wrapper {
+      position: relative;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 38%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(29, 26, 43, 0.82);
+      color: #FFFFFF;
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.32);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 800;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+      user-select: none;
+    }
+
+    .carousel-nav.prev {
+      left: 6px;
+    }
+
+    .carousel-nav.next {
+      right: 6px;
+    }
+
+    .carousel-nav:active {
+      transform: translateY(-50%) scale(0.92);
+      background: #1D1A2B;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scrollbar-width: none;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-slide {
+      flex: 0 0 78%;
+      scroll-snap-align: start;
+      background: #FFFFFF;
+      border: 1px solid #E5DFD5;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(30, 27, 46, 0.06);
+    }
+
+    /* 4:3 IMAGE CONTAINERS & ENQUADRAMENTO RESPONSIVO */
+    .slide-img-box {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      position: relative;
+      background: #27233A;
+    }
+
+    .slide-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .slide-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--accent-yellow);
+      color: var(--text-dark);
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 4px 9px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .slide-caption {
+      padding: 13px 14px;
+    }
+
+    .slide-caption h4 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 0.98rem;
+      margin-bottom: 3px;
+      color: var(--text-dark);
+    }
+
+    .slide-caption p {
+      font-size: 0.82rem;
+      color: var(--text-muted-light);
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .carousel-hint {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-muted-light);
+    }
+
+    .carousel-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .carousel-dots .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #D1CBBF;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .carousel-dots .dot.active {
+      width: 20px;
+      border-radius: 999px;
+      background: #1D1A2B;
+    }
+
+    /* SQUISHY MINI HOW-TO STRIP */
+    .squishy-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 14px;
+      background: #FFFFFF;
+      border: 1px solid #E5DFD5;
+      border-radius: var(--radius-md);
+      padding: 12px 8px;
+      text-align: center;
+    }
+
+    .sq-step span {
+      font-size: 1.25rem;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .sq-step strong {
+      font-size: 0.72rem;
+      color: var(--text-dark);
+      display: block;
+    }
+
+    /* =========================================================================
+       1. SEÇÃO "COMO FUNCIONA" (MODELADA FIELMENTE NA REFERÊNCIA)
+    ========================================================================== */
+    .section-header-left {
+      text-align: left;
+      margin-bottom: 22px;
+    }
+
+    .pill-como-funciona {
+      background: #FDE047;
+      color: #1E1B2E;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .title-como-funciona {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.85rem;
+      line-height: 1.12;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .sub-como-funciona {
+      color: #C8C3DC;
+      font-size: 0.92rem;
+      line-height: 1.45;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .steps-grid-pastel {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .steps-grid-pastel {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+    }
+
+    .step-card-pastel {
+      border: none;
+      border-radius: 18px;
+      padding: 18px 15px;
+      color: #1E1B2E;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 175px;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.15s ease;
+    }
+
+    .step-card-pastel.card-yellow { background-color: #FDE047; }
+    .step-card-pastel.card-pink   { background-color: #F9A8D4; }
+    .step-card-pastel.card-green  { background-color: #86EFAC; }
+    .step-card-pastel.card-purple { background-color: #C4B5FD; }
+
+    .step-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .step-num-outline {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 2.7rem;
+      font-weight: 800;
+      line-height: 0.9;
+      color: transparent;
+      -webkit-text-stroke: 2px #1E1B2E;
+      user-select: none;
+    }
+
+    .step-icon-svg {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-icon-svg svg {
+      width: 18px;
+      height: 18px;
+      stroke: #1E1B2E;
+      stroke-width: 2;
+      fill: none;
+      display: block;
+    }
+
+    .step-card-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #1E1B2E;
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .step-card-content p {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      color: #2D2942;
+      font-weight: 500;
+    }
+
+    /* OBJECTIONS */
+    .objection-card {
+      background: #FFFFFF;
+      border: 1px solid #E5DFD5;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .objection-card h3 {
+      font-size: 0.98rem;
+      color: var(--accent-coral);
+      margin-bottom: 5px;
+    }
+
+    .objection-card p {
+      font-size: 0.88rem;
+      color: var(--text-dark);
+    }
+
+    /* RESERVED SOCIAL PROOF SLOT */
+    .proof-placeholder {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px dashed rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted-dark);
+    }
+
+    /* =========================================================================
+       2. SEÇÃO DE BÔNUS (GRADE NEOBRUTALISTA COM CAPA VERTICAL DA REFERÊNCIA)
+    ========================================================================== */
+    .pill-bonus-ref {
+      background: #1E1B2E;
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .title-bonus-ref {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.85rem;
+      line-height: 1.12;
+      color: #1E1B2E;
+      margin-bottom: 22px;
+      text-align: left;
+    }
+
+    .bonus-grid-ref {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .bonus-grid-ref {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+    }
+
+    /* No mobile, centraliza o 3º card de forma equilibrada */
+    @media (max-width: 767px) {
+      .bonus-card-ref:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 6px);
+      }
+    }
+
+    .bonus-card-ref {
+      background: #FFFFFF;
+      border: 2px solid #1E1B2E;
+      border-radius: 18px;
+      box-shadow: 4px 4px 0px #1E1B2E;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    .bonus-cover-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1.5px solid #1E1B2E;
+      aspect-ratio: 3 / 4;
+      position: relative;
+      margin-bottom: 10px;
+      background: #FFFDF9;
+      width: 100%;
+    }
+
+    .bonus-cover-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .bonus-promo-badge {
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #FF6B4A;
+      color: #FFFFFF;
+      font-size: 0.62rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      z-index: 2;
+      letter-spacing: 0.04em;
+    }
+
+    .bonus-tag-ref {
+      display: inline-block;
+      align-self: flex-start;
+      border: 1.5px solid #1E1B2E;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      color: #1E1B2E;
+      margin-bottom: 6px;
+      background: #FFFFFF;
+    }
+
+    .bonus-card-ref h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 0.92rem;
+      line-height: 1.25;
+      color: #1E1B2E;
+      margin-bottom: 5px;
+    }
+
+    .bonus-card-ref p {
+      font-size: 0.76rem;
+      line-height: 1.38;
+      color: #57526E;
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+
+    .bonus-price-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .bonus-price-row s {
+      font-size: 0.76rem;
+      color: #6B6580;
+      font-weight: 600;
+      text-decoration: line-through;
+    }
+
+    .bonus-price-row b {
+      background: #FDE047;
+      border: 1.5px solid #1E1B2E;
+      color: #1E1B2E;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    /* THERMAL RECEIPT ANCHOR ("FAZ A CONTA COMIGO") */
+    .receipt {
+      background: #FFFDF7;
+      color: #1E1B2E;
+      border-radius: 12px;
+      padding: 22px 18px;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border-top: 6px solid var(--accent-yellow);
+      margin-bottom: 20px;
+    }
+
+    .receipt-header {
+      text-align: center;
+      border-bottom: 2px dashed #D1CBBF;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .receipt-header h3 {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .receipt-header span {
+      font-size: 0.78rem;
+      color: #6B6580;
+      font-weight: 600;
+    }
+
+    .receipt-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.88rem;
+      padding: 7px 0;
+      border-bottom: 1px dotted #E2DCD0;
+      gap: 10px;
+    }
+
+    .receipt-row span:last-child {
+      font-weight: 700;
+      text-decoration: line-through;
+      color: #8C859E;
+      white-space: nowrap;
+    }
+
+    .receipt-row.receipt-bonus {
+      background: rgba(16, 185, 129, 0.05);
+      padding: 7px 8px;
+      border-radius: 6px;
+      margin: 3px 0;
+      border-bottom: 1px dashed rgba(16, 185, 129, 0.25);
+    }
+
+    .bonus-tag-receipt {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800 !important;
+      color: var(--accent-mint-hover) !important;
+      text-decoration: none !important;
+    }
+
+    .bonus-tag-receipt del {
+      color: #9CA3AF;
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-decoration: line-through;
+    }
+
+    .receipt-total {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 2px dashed #D1CBBF;
+      text-align: center;
+    }
+
+    .receipt-old {
+      font-size: 0.88rem;
+      color: #6B6580;
+      text-decoration: line-through;
+    }
+
+    .receipt-price {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 2.7rem;
+      font-weight: 700;
+      color: var(--accent-mint-hover);
+      line-height: 1.1;
+      margin: 4px 0;
+    }
+
+    .receipt-unit {
+      display: inline-block;
+      background: #D1FAE5;
+      color: #065F46;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .guarantee-box {
+      background: var(--bg-card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .guarantee-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--accent-yellow);
+      color: var(--text-dark);
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .guarantee-box p {
+      font-size: 0.83rem;
+      color: var(--text-muted-dark);
+    }
+
+    /* FAQ ACCORDION */
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid #E5DFD5;
+      border-radius: var(--radius-md);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 15px 16px;
+      text-align: left;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.93rem;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 16px 15px;
+      font-size: 0.87rem;
+      color: var(--text-muted-light);
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* STICKY BOTTOM BAR MOBILE */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(20, 18, 31, 0.96);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 10px 16px;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      transform: translateY(100%);
+      transition: transform 0.25s ease;
+    }
+
+    .sticky-bar.visible {
+      transform: translateY(0);
+    }
+
+    .sticky-inner {
+      width: 100%;
+      max-width: 540px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .sticky-price-info span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted-dark);
+    }
+
+    .sticky-price-info strong {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.25rem;
+      color: var(--accent-yellow);
+    }
+
+    .sticky-btn {
+      background: var(--accent-mint);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.88rem;
+      padding: 11px 18px;
+      border-radius: 10px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    }
+
+    /* FOOTER COMPLIANCE */
+    footer {
+      background: #14121F;
+      color: #8E88A8;
+      padding: 28px 0 36px;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FAIXA ANIMADA TOPO (TODAS AS BRINCADEIRAS E ATIVIDADES) -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-track">
+      🧸 SQUISHY DE PAPEL DE APERTAR • 🎨 DESENHOS ATUAIS PARA PINTAR • 🎲 BRINCADEIRAS ANIMADAS • 🏪 KIT LOJINHA DE FAZ DE CONTA • 🏅 QUADRO DE MISSÕES • 🧩 PASSATEMPOS VISUAIS • ☀️ FÉRIAS SEM TELAS • &nbsp;&nbsp;&nbsp;
+      🧸 SQUISHY DE PAPEL DE APERTAR • 🎨 DESENHOS ATUAIS PARA PINTAR • 🎲 BRINCADEIRAS ANIMADAS • 🏪 KIT LOJINHA DE FAZ DE CONTA • 🏅 QUADRO DE MISSÕES • 🧩 PASSATEMPOS VISUAIS • ☀️ FÉRIAS SEM TELAS • &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- DOBRA 1: HERO -->
+  <header class="hero" id="topo">
+    <div class="container">
+      <div class="season-pill">☀️ Especial Férias • Acesso Imediato no Celular</div>
+      <h1>Férias chegando? Tire seus filhos das telas com <span>brincadeiras animadas, desenhos atuais e Squishies de papel</span>!</h1>
+      <p class="hero-sub">Um pacote completo para imprimir, pintar, recortar, apertar e brincar dentro de casa — prendendo a atenção das crianças longe do celular.</p>
+
+      <!-- 3 PILARES DO PRODUTO -->
+      <div class="hero-pillars">
+        <div class="pillar-box">
+          <span class="emoji">🧸</span>
+          <strong>Squishies de Papel</strong>
+          <span>Brinquedo de apertar</span>
+        </div>
+        <div class="pillar-box">
+          <span class="emoji">🎨</span>
+          <strong>Desenhos Atuais</strong>
+          <span>Prontos para pintar</span>
+        </div>
+        <div class="pillar-box">
+          <span class="emoji">🎲</span>
+          <strong>Brincadeiras</strong>
+          <span>Animadas em casa</span>
+        </div>
+      </div>
+
+      <a href="#oferta" class="btn-cta">
+        QUERO O KIT COMPLETO POR R$ 17,99
+        <small>Acesso imediato no Pix ou Cartão • Pagamento único</small>
+      </a>
+
+      <div class="trust-strip">
+        <span>⚡ Acesso imediato</span>
+        <span>🔒 Pagamento único</span>
+        <span>🛡️ Garantia de 15 dias</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- DOBRA 2: CONEXÃO COM A DOR -->
+  <section class="section-light">
+    <div class="container">
+      <h2 class="section-title">Você conhece essa cena nas férias?</h2>
+      <p class="section-subtitle">Não é falta de criatividade sua. É falta de ter o material certo à mão.</p>
+
+      <div class="pain-box">
+        <span class="pain-quote">“Mãe, tô entediado…”</span>
+        <p>Logo nos primeiros dias de férias, a casa já está virada e você ainda tem trabalho, almoço ou coisas para resolver.</p>
+        <p>Você cede <em>“só 10 minutinhos”</em> de celular ou TV. Quando olha no relógio, já passou a manhã inteira — e bate aquela culpa pesada.</p>
+        <p>Com esse kit, você junta o que as crianças mais amam: montar os próprios <strong>Squishies fofinhos de papel</strong>, colorir <strong>desenhos atuais</strong> e participar de <strong>brincadeiras animadas</strong> que realmente prendem a atenção.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOBRA 3: VITRINE INTERATIVA COM ABAS + CARROSSEL DE FOTOS -->
+  <section class="section-soft" id="vitrine">
+    <div class="container">
+      <h2 class="section-title">Veja tudo o que vem por dentro</h2>
+      <p class="section-subtitle">Toque nas abas abaixo e deslize para ver as fotos e exemplos:</p>
+
+      <!-- BOTÕES DAS 3 ABAS -->
+      <div class="showcase-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="squishy" type="button">
+          <span class="tab-emoji">🧸</span>
+          <span>Squishies</span>
+        </button>
+        <button class="tab-btn" data-tab="desenhos" type="button">
+          <span class="tab-emoji">🎨</span>
+          <span>Desenhos</span>
+        </button>
+        <button class="tab-btn" data-tab="brincadeiras" type="button">
+          <span class="tab-emoji">🎲</span>
+          <span>Brincadeiras</span>
+        </button>
+      </div>
+
+      <!-- ===================================================================
+           ABA 1: SQUISHY DE PAPEL (CARROSSEL DE IMAGENS)
+      ==================================================================== -->
+      <div class="tab-panel active" id="panel-squishy">
+        <div class="panel-intro">
+          <h3>🧸 Como Fazer: Squishy (Brinquedo de Papel de Apertar)</h3>
+          <p>A febre entre as crianças! Moldes prontos para imprimir, pintar, passar fita e encher — vira um brinquedo macio de apertar que elas colecionam.</p>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-nav prev" type="button" onclick="scrollCarousel('track-squishy', -1)" aria-label="Slide anterior">‹</button>
+          <button class="carousel-nav next" type="button" onclick="scrollCarousel('track-squishy', 1)" aria-label="Próximo slide">›</button>
+
+          <div class="carousel-track" id="track-squishy">
+            <!-- SLIDE 1 SQUISHY (PRIMEIRA IMAGEM CARREGA IMEDIATAMENTE) -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Molde + Passo a Passo</span>
+                <img src="imagens/squishy-1.webp" alt="Squishy de Papel Fofo" width="800" height="600" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Squishies Fofos & Comidinhas</h4>
+                <p>Moldes frente e verso alinhados para recortar e montar sem erro.</p>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 SQUISHY -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Super Macio</span>
+                <img src="imagens/squishy-2.webp" alt="Squishy de Papel Personagens" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Coleção Divertida para Apertar</h4>
+                <p>Encha com algodão, fibra ou sacolinha plástica que você já tem em casa.</p>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 SQUISHY -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Preto e Branco + Colorido</span>
+                <img src="imagens/squishy-3.webp" alt="Squishy para Colorir e Montar" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Versão para Pintar ou Já Colorida</h4>
+                <p>A criança pode colorir do jeito dela ou apenas recortar e colar.</p>
+              </div>
+            </div>
+
+            <!-- SLIDE 4 SQUISHY -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Guia Visual</span>
+                <img src="imagens/squishy-4.webp" alt="Montagem do Squishy" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Ensina a Fazer do Zero</h4>
+                <p>Passo a passo simples para a criança criar sua própria coleção nas férias.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <span class="carousel-hint">👈 Deslize ou toque nas setas</span>
+            <div class="carousel-dots" id="dots-squishy">
+              <span class="dot active" onclick="goToSlide('track-squishy', 0)" role="button" aria-label="Slide 1"></span>
+              <span class="dot" onclick="goToSlide('track-squishy', 1)" role="button" aria-label="Slide 2"></span>
+              <span class="dot" onclick="goToSlide('track-squishy', 2)" role="button" aria-label="Slide 3"></span>
+              <span class="dot" onclick="goToSlide('track-squishy', 3)" role="button" aria-label="Slide 4"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MINI PASSO A PASSO DO SQUISHY -->
+        <div class="squishy-steps">
+          <div class="sq-step"><span>🖨️</span><strong>1. Imprima</strong></div>
+          <div class="sq-step"><span>🖍️</span><strong>2. Pinte</strong></div>
+          <div class="sq-step"><span>🩹</span><strong>3. Passe Fita</strong></div>
+          <div class="sq-step"><span>☁️</span><strong>4. Encha e Aperte</strong></div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           ABA 2: DESENHOS ATUAIS PARA PINTAR (CARROSSEL DE IMAGENS)
+      ==================================================================== -->
+      <div class="tab-panel" id="panel-desenhos">
+        <div class="panel-intro">
+          <h3>🎨 Desenhos Atuais para Pintar</h3>
+          <p>Nada de desenhos antigos e sem graça. Selecionamos ilustrações modernas, fofas e cheias de detalhes que prendem a criança na mesa com lápis de cor e canetinha.</p>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-nav prev" type="button" onclick="scrollCarousel('track-desenhos', -1)" aria-label="Slide anterior">‹</button>
+          <button class="carousel-nav next" type="button" onclick="scrollCarousel('track-desenhos', 1)" aria-label="Próximo slide">›</button>
+
+          <div class="carousel-track" id="track-desenhos">
+            <!-- SLIDE 1 DESENHOS -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Estilo Atual</span>
+                <img src="imagens/desenho-1.webp" alt="Desenho Atual para Pintar 1" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Ilustrações Fofas & Modernas</h4>
+                <p>Traços limpos e nítidos em folha A4, prontos para imprimir em casa.</p>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 DESENHOS -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Aventura & Fantasia</span>
+                <img src="imagens/desenho-2.webp" alt="Desenho Atual para Pintar 2" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Temas que Meninos e Meninas Amam</h4>
+                <p>Variedade de cenários criativos para pintar por horas sem enjoar.</p>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 DESENHOS -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Criatividade</span>
+                <img src="imagens/desenho-3.webp" alt="Desenho Atual para Pintar 3" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Desenhos para Completar e Colorir</h4>
+                <p>Estimula a imaginação da criança enquanto relaxa longe das telas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <span class="carousel-hint">👈 Deslize ou toque nas setas</span>
+            <div class="carousel-dots" id="dots-desenhos">
+              <span class="dot active" onclick="goToSlide('track-desenhos', 0)" role="button" aria-label="Slide 1"></span>
+              <span class="dot" onclick="goToSlide('track-desenhos', 1)" role="button" aria-label="Slide 2"></span>
+              <span class="dot" onclick="goToSlide('track-desenhos', 2)" role="button" aria-label="Slide 3"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           ABA 3: BRINCADEIRAS ANIMADAS & ATIVIDADES
+      ==================================================================== -->
+      <div class="tab-panel" id="panel-brincadeiras">
+        <div class="panel-intro">
+          <h3>🎲 Brincadeiras Animadas que Prendem a Atenção</h3>
+          <p>Dinâmicas agitadas, missões e desafios criativos feitos com objetos simples da sua casa — ideais para gastar energia e dar muita risada.</p>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-nav prev" type="button" onclick="scrollCarousel('track-brincadeiras', -1)" aria-label="Slide anterior">‹</button>
+          <button class="carousel-nav next" type="button" onclick="scrollCarousel('track-brincadeiras', 1)" aria-label="Próximo slide">›</button>
+
+          <div class="carousel-track" id="track-brincadeiras">
+            <!-- SLIDE 1 BRINCADEIRAS -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Ação & Movimento</span>
+                <img src="imagens/brincadeira-1.webp" alt="Caça ao Tesouro e Missões" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Caça ao Tesouro & Missões Secretas</h4>
+                <p>Pistas divertidas para esconder pela sala e transformar a casa numa aventura.</p>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 BRINCADEIRAS -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Gasta Energia</span>
+                <img src="imagens/brincadeira-2.webp" alt="Circuitos e Desafios" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Circuitos e Desafios de Equilíbrio</h4>
+                <p>Brincadeiras animadas usando copos, fita crepe, almofadas e itens de casa.</p>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 BRINCADEIRAS -->
+            <div class="carousel-slide">
+              <div class="slide-img-box">
+                <span class="slide-badge">Em Família</span>
+                <img src="imagens/brincadeira-3.webp" alt="Jogos em Família" width="800" height="600" loading="lazy" decoding="async" />
+              </div>
+              <div class="slide-caption">
+                <h4>Gincanas & Jogos de Raciocínio</h4>
+                <p>Atividades envolventes que fazem a criança esquecer que o celular existe.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <span class="carousel-hint">👈 Deslize ou toque nas setas</span>
+            <div class="carousel-dots" id="dots-brincadeiras">
+              <span class="dot active" onclick="goToSlide('track-brincadeiras', 0)" role="button" aria-label="Slide 1"></span>
+              <span class="dot" onclick="goToSlide('track-brincadeiras', 1)" role="button" aria-label="Slide 2"></span>
+              <span class="dot" onclick="goToSlide('track-brincadeiras', 2)" role="button" aria-label="Slide 3"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DOBRA 4: COMO FUNCIONA (MODELADO FIELMENTE NA REFERÊNCIA)
+  ========================================================================== -->
+  <section class="section-dark" id="como-funciona">
+    <div class="container">
+      <div class="section-header-left">
+        <span class="pill-como-funciona">COMO FUNCIONA</span>
+        <h2 class="title-como-funciona">Do celular pra brincadeira em 4 passos</h2>
+        <p class="sub-como-funciona">Sem frete, sem brinquedo caro. Tudo pronto para usar em casa.</p>
+      </div>
+
+      <div class="steps-grid-pastel">
+        <!-- CARD 1 -->
+        <div class="step-card-pastel card-yellow">
+          <div class="step-card-top">
+            <span class="step-num-outline">1</span>
+            <span class="step-icon-svg" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </span>
+          </div>
+          <div class="step-card-content">
+            <h3>Recebe</h3>
+            <p>Acesso imediato após o pagamento direto no seu celular.</p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="step-card-pastel card-pink">
+          <div class="step-card-top">
+            <span class="step-num-outline">2</span>
+            <span class="step-icon-svg" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+            </span>
+          </div>
+          <div class="step-card-content">
+            <h3>Escolhe</h3>
+            <p>Puxa um Squishy, um desenho atual ou uma brincadeira animada.</p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="step-card-pastel card-green">
+          <div class="step-card-top">
+            <span class="step-num-outline">3</span>
+            <span class="step-icon-svg" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            </span>
+          </div>
+          <div class="step-card-content">
+            <h3>Prepara</h3>
+            <p>Imprime ou abre na tela usando itens simples que já tem em casa.</p>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="step-card-pastel card-purple">
+          <div class="step-card-top">
+            <span class="step-num-outline">4</span>
+            <span class="step-icon-svg" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </span>
+          </div>
+          <div class="step-card-content">
+            <h3>Brinca</h3>
+            <p>Criança entretida longe das telas, pintando, apertando e criando.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOBRA 5: QUEBRA DAS 4 OBJEÇÕES PRINCIPAIS -->
+  <section class="section-light">
+    <div class="container">
+      <h2 class="section-title">Dúvidas comuns antes de garantir</h2>
+      <p class="section-subtitle">Veja por que esse kit funciona na rotina real das férias:</p>
+
+      <div class="objection-card">
+        <h3>1. “Meu filho enjoa rápido e não para quieto”</h3>
+        <p>Por isso o kit mistura dois ritmos: <strong>brincadeiras animadas de movimento</strong> para gastar energia e atividades mão na massa (<strong>montar Squishies de papel e pintar desenhos atuais</strong>) que prendem o foco.</p>
+      </div>
+
+      <div class="objection-card">
+        <h3>2. “É difícil fazer os Squishies de papel?”</h3>
+        <p>Não! Os moldes já vêm prontos no tamanho certo. Basta imprimir, pintar, passar fita adesiva transparente para dar o brilho, recortar as bordas e rechear com algodão ou sacolinha plástica.</p>
+      </div>
+
+      <div class="objection-card">
+        <h3>3. “Não tenho impressora em casa”</h3>
+        <p>Todas as <strong>brincadeiras animadas e missões</strong> você lê direto na tela do celular e aplica sem imprimir nada. Já os moldes de Squishies e desenhos vão em PDF pronto para imprimir em qualquer papelaria ou gráfica rápida por centavos.</p>
+      </div>
+
+      <div class="objection-card">
+        <h3>4. “Serve para meninos e meninas?”</h3>
+        <p>Sim! O pacote reúne temas variados de aventuras, animais, comidinhas fofas, desafios e gincanas pensados para agradar tanto meninos quanto meninas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOBRA 6: ESPAÇO RESERVADO PARA PROVA SOCIAL REAL -->
+  <section class="section-dark" style="padding-bottom: 10px;">
+    <div class="container">
+      <div class="proof-placeholder">
+        💬 <strong>Feito para as férias escolares:</strong> tudo organizado em um só lugar para você não precisar ficar caçando ideias soltas na internet todos os dias.
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DOBRA: SEÇÃO DE BÔNUS (GRADE NEOBRUTALISTA COM CAPA VERTICAL DA REFERÊNCIA)
+  ========================================================================== -->
+  <section class="section-soft" id="bonus">
+    <div class="container">
+      <div class="section-header-left">
+        <span class="pill-bonus-ref">DE BRINDE NO KIT COMPLETO</span>
+        <h2 class="title-bonus-ref">3 bônus pra brincadeira não acabar</h2>
+      </div>
+
+      <div class="bonus-grid-ref">
+        <!-- BÔNUS 1 -->
+        <article class="bonus-card-ref">
+          <div class="bonus-cover-frame">
+            <span class="bonus-promo-badge">BÔNUS 1</span>
+            <img src="imagens/bonus-1.webp" alt="Bônus 1 - Kit Lojinha de Faz de Conta" width="800" height="600" loading="lazy" decoding="async" />
+          </div>
+          <span class="bonus-tag-ref">Bônus 1</span>
+          <h3>Kit Lojinha de Faz de Conta</h3>
+          <p>Dinheirinho de papel, etiquetas, placa de Aberto/Fechado e cardápios para brincar de vendinha com os squishies.</p>
+          <div class="bonus-price-row">
+            <s>R$ 19,90</s>
+            <b>GRÁTIS</b>
+          </div>
+        </article>
+
+        <!-- BÔNUS 2 -->
+        <article class="bonus-card-ref">
+          <div class="bonus-cover-frame">
+            <span class="bonus-promo-badge">BÔNUS 2</span>
+            <img src="imagens/bonus-2.webp" alt="Bônus 2 - Quadro de Missões & Medalhas" width="800" height="600" loading="lazy" decoding="async" />
+          </div>
+          <span class="bonus-tag-ref">Bônus 2</span>
+          <h3>Quadro de Missões & Medalhas</h3>
+          <p>Cartela ilustrada para marcar cada atividade concluída e ganhar medalhas de papel recortáveis.</p>
+          <div class="bonus-price-row">
+            <s>R$ 14,90</s>
+            <b>GRÁTIS</b>
+          </div>
+        </article>
+
+        <!-- BÔNUS 3 -->
+        <article class="bonus-card-ref">
+          <div class="bonus-cover-frame">
+            <span class="bonus-promo-badge">BÔNUS 3</span>
+            <img src="imagens/bonus-3.webp" alt="Bônus 3 - Passatempos & Cartas de Mímica" width="800" height="600" loading="lazy" decoding="async" />
+          </div>
+          <span class="bonus-tag-ref">Bônus 3</span>
+          <h3>Passatempos & Cartas de Mímica</h3>
+          <p>Labirintos, jogo dos 7 erros e baralho ilustrado de mímica e adivinhas para brincar em família.</p>
+          <div class="bonus-price-row">
+            <s>R$ 17,90</s>
+            <b>GRÁTIS</b>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOBRA 7: CUPOM FISCAL DE ANCORAGEM + OFERTA R$ 17,99 -->
+  <section class="section-dark" id="oferta">
+    <div class="container">
+      <h2 class="section-title">Faz a conta comigo</h2>
+      <p class="section-subtitle">Menos que o preço de um lanche para salvar suas férias inteiras:</p>
+
+      <div class="receipt">
+        <div class="receipt-header">
+          <h3>🧾 KIT FÉRIAS SEM TELAS</h3>
+          <span>ACESSO IMEDIATO • PAGAMENTO ÚNICO</span>
+        </div>
+
+        <div class="receipt-row">
+          <span>🧸 Coleção Squishies de Papel</span>
+          <span>R$ 29,90</span>
+        </div>
+        <div class="receipt-row">
+          <span>🎨 Caderno de Desenhos Atuais para Pintar</span>
+          <span>R$ 24,90</span>
+        </div>
+        <div class="receipt-row">
+          <span>🎲 Guia de Brincadeiras Animadas & Atividades</span>
+          <span>R$ 27,00</span>
+        </div>
+        <div class="receipt-row receipt-bonus">
+          <span>🎁 Bônus 1: Kit Lojinha de Faz de Conta</span>
+          <span class="bonus-tag-receipt"><del>R$ 19,90</del> GRÁTIS</span>
+        </div>
+        <div class="receipt-row receipt-bonus">
+          <span>🎁 Bônus 2: Quadro de Missões & Medalhas</span>
+          <span class="bonus-tag-receipt"><del>R$ 14,90</del> GRÁTIS</span>
+        </div>
+        <div class="receipt-row receipt-bonus">
+          <span>🎁 Bônus 3: Passatempos & Cartas de Mímica</span>
+          <span class="bonus-tag-receipt"><del>R$ 17,90</del> GRÁTIS</span>
+        </div>
+
+        <div class="receipt-total">
+          <div class="receipt-old">Valor total separado: R$ 134,50</div>
+          <div class="receipt-price">R$ 17,99</div>
+          <div class="receipt-unit">Pagamento único • Sem mensalidade</div>
+
+          <a href="#" class="btn-cta js-checkout-btn">
+            QUERO O KIT POR R$ 17,99
+            <small>Liberação automática via Pix ou Cartão</small>
+          </a>
+        </div>
+      </div>
+
+      <div class="guarantee-box">
+        <div class="guarantee-badge">15 DIAS</div>
+        <p><strong>Risco Zero:</strong> Compre, baixe e aproveite os Squishies, desenhos e brincadeiras com seus filhos. Se achar que não valeu a pena, devolvemos 100% do seu dinheiro em até 15 dias.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOBRA 8: FAQ ENXUTO -->
+  <section class="section-light">
+    <div class="container">
+      <h2 class="section-title">Perguntas frequentes</h2>
+
+      <div class="faq-item open">
+        <button class="faq-question" type="button">O que vem exatamente no pacote? <span>+</span></button>
+        <div class="faq-answer">Você recebe acesso imediato ao pacote completo dividido em 3 frentes principais: moldes e passo a passo para montar <strong>Squishies de papel de apertar</strong>, caderno com <strong>desenhos atuais para pintar</strong> e um guia de <strong>brincadeiras animadas e atividades criativas</strong> para fazer em casa. Além disso, você libera gratuitamente hoje os <strong>3 bônus exclusivos</strong>: <em>Kit Lojinha de Faz de Conta</em> (com dinheirinho e cardápios), <em>Quadro de Missões & Medalhas</em> gamificado e o <em>Passatempos & Cartas de Mímica</em>.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">Como recebo o material após pagar? <span>+</span></button>
+        <div class="faq-answer">Assim que o Pix ou cartão for aprovado, você recebe na hora um e-mail e uma mensagem no WhatsApp com o link direto para baixar todos os arquivos no celular ou computador.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">Preciso ter impressora em casa? <span>+</span></button>
+        <div class="faq-answer">Para as brincadeiras animadas e dinâmicas em família, não precisa imprimir nada — basta ler na tela do celular. Para os Squishies de papel e desenhos para pintar, você pode imprimir em casa ou em qualquer papelaria/gráfica rápida.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">E se eu comprar e não gostar? <span>+</span></button>
+        <div class="faq-answer">Você tem 15 dias de garantia incondicional. Se não ficar satisfeito por qualquer motivo, devolvemos 100% do valor pago sem burocracia.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA FIXA MOBILE (APARECE AO ROLAR A PÁGINA) -->
+  <div class="sticky-bar" id="sticky-bar">
+    <div class="sticky-inner">
+      <div class="sticky-price-info">
+        <span>Kit Completo • Acesso Imediato</span>
+        <strong>R$ 17,99</strong>
+      </div>
+      <a href="#oferta" class="sticky-btn">QUERO O KIT AGORA</a>
+    </div>
+  </div>
+
+  <!-- RODAPÉ DE COMPLIANCE -->
+  <footer>
+    <div class="container">
+      <p><strong>Produto 100% Digital:</strong> Nenhum material físico será enviado pelos Correios. O acesso aos arquivos em PDF é liberado imediatamente após a confirmação do pagamento.</p>
+      <p><strong>Segurança:</strong> Recomenda-se supervisão de um adulto durante o uso de tesoura sem ponta e na montagem dos Squishies com crianças menores.</p>
+      <p>© 2026 Kit de Férias sem Telas • Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // =========================================================================
+    // 1. CONFIGURAÇÃO DO CHECKOUT (COLE AQUI O LINK DO SEU CHECKOUT DE R$ 17,99)
+    // =========================================================================
+    const CHECKOUT_URL = "https://SEU-CHECKOUT-AQUI.com.br";
+
+    function buildCheckoutUrl() {
+      if (CHECKOUT_URL.includes("SEU-CHECKOUT-AQUI")) return "#oferta";
+      const currentParams = window.location.search;
+      if (!currentParams) return CHECKOUT_URL;
+      const separator = CHECKOUT_URL.includes("?") ? "&" : "?";
+      return CHECKOUT_URL + separator + currentParams.substring(1);
+    }
+
+    document.querySelectorAll(".js-checkout-btn").forEach((btn) => {
+      btn.setAttribute("href", buildCheckoutUrl());
+      btn.addEventListener("click", function () {
+        // META PIXEL: InitiateCheckout (Descomente quando ativar o Pixel)
+        // if (typeof fbq === "function") {
+        //   fbq("track", "InitiateCheckout", { value: 17.99, currency: "BRL" });
+        // }
+      });
+    });
+
+    // =========================================================================
+    // 2. TROCA DE ABAS (SQUISHIES / DESENHOS / BRINCADEIRAS)
+    // =========================================================================
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanels = document.querySelectorAll(".tab-panel");
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.dataset.tab;
+
+        tabButtons.forEach((b) => b.classList.remove("active"));
+        tabPanels.forEach((p) => p.classList.remove("active"));
+
+        btn.classList.add("active");
+        const activePanel = document.getElementById("panel-" + target);
+        if (activePanel) {
+          activePanel.classList.add("active");
+          updateCarouselDots("track-" + target, "dots-" + target);
+        }
+
+        // META PIXEL: ViewContent ao explorar as abas
+        // if (typeof fbq === "function") {
+        //   fbq("track", "ViewContent", { content_name: "Aba " + target });
+        // }
+      });
+    });
+
+    // =========================================================================
+    // 3. CONTROLE DO CARROSSEL (LOOP ROTATIVO INFINITO + BOLINHAS SINCRONIZADAS)
+    // =========================================================================
+    function scrollCarousel(trackId, direction) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      const slide = track.querySelector(".carousel-slide");
+      const slideWidth = slide ? slide.offsetWidth : 260;
+      const step = slideWidth + 12;
+
+      // Loop rotativo
+      if (direction === 1 && (track.scrollLeft + track.clientWidth >= track.scrollWidth - 15)) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+      } else if (direction === -1 && track.scrollLeft <= 15) {
+        track.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: direction * step, behavior: "smooth" });
+      }
+    }
+
+    function updateCarouselDots(trackId, dotsId) {
+      const track = document.getElementById(trackId);
+      const dotsContainer = document.getElementById(dotsId);
+      if (!track || !dotsContainer) return;
+      const dots = dotsContainer.querySelectorAll(".dot");
+      const slides = track.querySelectorAll(".carousel-slide");
+      if (!dots.length || !slides.length) return;
+      const step = slides[0].offsetWidth + 12;
+      const activeIndex = Math.min(Math.round(track.scrollLeft / step), dots.length - 1);
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === activeIndex);
+      });
+    }
+
+    function goToSlide(trackId, index) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      const slides = track.querySelectorAll(".carousel-slide");
+      if (!slides[index]) return;
+      const step = slides[0].offsetWidth + 12;
+      track.scrollTo({ left: index * step, behavior: "smooth" });
+    }
+
+    // Ouvintes de rolagem sincronizados para atualizar as bolinhas indicadoras
+    ["squishy", "desenhos", "brincadeiras"].forEach((name) => {
+      const track = document.getElementById("track-" + name);
+      if (track) {
+        track.addEventListener("scroll", () => {
+          updateCarouselDots("track-" + name, "dots-" + name);
+        }, { passive: true });
+      }
+    });
+
+    // =========================================================================
+    // 4. BARRA FIXA MOBILE (APARECE APÓS PASSAR A PRIMEIRA DOBRA)
+    // =========================================================================
+    const stickyBar = document.getElementById("sticky-bar");
+    const heroSection = document.getElementById("topo");
+
+    window.addEventListener("scroll", () => {
+      if (!heroSection || !stickyBar) return;
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      if (window.scrollY > heroBottom - 80) {
+        stickyBar.classList.add("visible");
+      } else {
+        stickyBar.classList.remove("visible");
+      }
+    }, { passive: true });
+
+    // =========================================================================
+    // 5. ACCORDION DO FAQ
+    // =========================================================================
+    document.querySelectorAll(".faq-question").forEach((question) => {
+      question.addEventListener("click", () => {
+        question.parentElement.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>
