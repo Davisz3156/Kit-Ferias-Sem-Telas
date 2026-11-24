@@ -1594,7 +1594,7 @@
           <div class="receipt-price">R$ 17,99</div>
           <div class="receipt-unit">Pagamento único • Sem mensalidade</div>
 
-          <a href="#" class="btn-cta js-checkout-btn">
+          <a href="https://loja.semtellas.online/checkout/v5/Dr3DrsHJHoK2K2F0xWiUbB" class="btn-cta btn-checkout js-checkout-btn">
             QUERO O KIT POR R$ 17,99
             <small>Liberação automática via Pix ou Cartão</small>
           </a>
@@ -1642,7 +1642,7 @@
         <span>Kit Completo • Acesso Imediato</span>
         <strong>R$ 17,99</strong>
       </div>
-      <a href="#oferta" class="sticky-btn">QUERO O KIT AGORA</a>
+      <a href="https://loja.semtellas.online/checkout/v5/Dr3DrsHJHoK2K2F0xWiUbB" class="sticky-btn btn-checkout">QUERO O KIT AGORA</a>
     </div>
   </div>
 
@@ -1657,25 +1657,42 @@
 
   <script>
     // =========================================================================
-    // 1. CONFIGURAÇÃO DO CHECKOUT (COLE AQUI O LINK DO SEU CHECKOUT DE R$ 17,99)
+    // 1. CONFIGURAÇÃO DO CHECKOUT OFICIAL GG CHECKOUT + UTMS + PIXEL
     // =========================================================================
-    const CHECKOUT_URL = "https://SEU-CHECKOUT-AQUI.com.br";
+    const CHECKOUT_URL = "https://loja.semtellas.online/checkout/v5/Dr3DrsHJHoK2K2F0xWiUbB";
 
     function buildCheckoutUrl() {
-      if (CHECKOUT_URL.includes("SEU-CHECKOUT-AQUI")) return "#oferta";
       const currentParams = window.location.search;
       if (!currentParams) return CHECKOUT_URL;
+      const cleanParams = currentParams.startsWith("?") ? currentParams.substring(1) : currentParams;
+      if (!cleanParams) return CHECKOUT_URL;
       const separator = CHECKOUT_URL.includes("?") ? "&" : "?";
-      return CHECKOUT_URL + separator + currentParams.substring(1);
+      return CHECKOUT_URL + separator + cleanParams;
     }
 
-    document.querySelectorAll(".js-checkout-btn").forEach((btn) => {
+    // Vincular botões de checkout para disparo de Pixel, repasse de UTMs e redirecionamento
+    const checkoutButtons = document.querySelectorAll('.btn-checkout, a[href*="loja.semtellas.online"]');
+    checkoutButtons.forEach((btn) => {
       btn.setAttribute("href", buildCheckoutUrl());
-      btn.addEventListener("click", function () {
-        // META PIXEL: InitiateCheckout (Descomente quando ativar o Pixel)
-        // if (typeof fbq === "function") {
-        //   fbq("track", "InitiateCheckout", { value: 17.99, currency: "BRL" });
-        // }
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const finalUrl = buildCheckoutUrl();
+
+        // 1. Disparar InitiateCheckout no Meta Pixel
+        if (typeof fbq === "function") {
+          fbq("track", "InitiateCheckout", {
+            content_name: "Kit Férias sem Telas",
+            content_ids: ["kit-ferias-sem-telas"],
+            content_type: "product",
+            value: 17.99,
+            currency: "BRL"
+          });
+        }
+
+        // 2 & 3. Redirecionar com parâmetros de URL após 180ms
+        setTimeout(() => {
+          window.location.href = finalUrl;
+        }, 180);
       });
     });
 
