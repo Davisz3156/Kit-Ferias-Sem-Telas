@@ -159,7 +159,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
-      margin-bottom: 22px;
+      margin-bottom: 16px;
     }
 
     .pillar-box {
@@ -227,7 +227,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px 14px;
-      margin-top: 12px;
+      margin-top: 0;
       font-size: 0.76rem;
       color: var(--text-muted-dark);
       font-weight: 600;
@@ -1304,11 +1304,6 @@
         </div>
       </div>
 
-      <a href="#oferta" class="btn-cta">
-        QUERO O KIT COMPLETO POR R$ 17,99
-        <small>Acesso imediato no Pix ou Cartão • Pagamento único</small>
-      </a>
-
       <div class="trust-strip">
         <span>⚡ Acesso imediato</span>
         <span>🔒 Pagamento único</span>
@@ -1886,7 +1881,7 @@
         <span>Kit Completo • Acesso Imediato</span>
         <strong>R$ 17,99</strong>
       </div>
-      <a href="https://loja.semtellas.online/checkout/v5/Dr3DrsHJHoK2K2F0xWiUbB" class="sticky-btn btn-checkout">QUERO O KIT AGORA</a>
+      <a href="#videos-pratica" class="sticky-btn">QUERO O KIT AGORA</a>
     </div>
   </div>
 
@@ -1923,9 +1918,9 @@
     }
 
     // Atualiza o href dos botões de checkout antecipadamente com as UTMs da visita
-    document.querySelectorAll('.btn-checkout, #oferta .btn-cta, .sticky-bar a, a[href*="loja.semtellas.online"]').forEach((btn) => {
+    document.querySelectorAll('.btn-checkout, #oferta .btn-cta, a[href*="loja.semtellas.online"]').forEach((btn) => {
       const rawHref = (btn.getAttribute("href") || "").trim();
-      if (rawHref !== "#oferta") {
+      if (!rawHref.startsWith("#")) {
         btn.setAttribute("href", buildCheckoutUrl());
       }
     });
@@ -1936,11 +1931,11 @@
       if (!target) return;
 
       const rawHref = (target.getAttribute("href") || "").trim();
-      if (rawHref === "#oferta") return;
+      if (rawHref.startsWith("#")) return;
 
       const isCheckoutTarget =
         rawHref.includes("loja.semtellas.online") ||
-        target.matches(".btn-checkout, #oferta .btn-cta, .sticky-bar a");
+        target.matches(".btn-checkout, #oferta .btn-cta");
 
       if (!isCheckoutTarget) return;
 
