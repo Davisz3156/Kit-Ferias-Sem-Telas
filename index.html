@@ -14,9 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- =====================================================================
-       META PIXEL BASE (Descomente e substitua SEU_PIXEL_ID_AQUI)
+       META PIXEL BASE (ID: 2153911028584475)
   ====================================================================== -->
-  <!--
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -26,10 +25,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('init', '2153911028584475');
     fbq('track', 'PageView');
   </script>
-  -->
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2153911028584475&ev=PageView&noscript=1" />
+  </noscript>
 
   <style>
     :root {
@@ -158,7 +159,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
-      margin-bottom: 22px;
+      margin-bottom: 16px;
     }
 
     .pillar-box {
@@ -226,7 +227,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px 14px;
-      margin-top: 12px;
+      margin-top: 0;
       font-size: 0.76rem;
       color: var(--text-muted-dark);
       font-weight: 600;
@@ -849,6 +850,183 @@
       display: inline-block;
     }
 
+    /* =========================================================================
+       DOBRA: VÍDEOS DE DEMONSTRAÇÃO E PROVA VISUAL (#videos-pratica)
+    ========================================================================== */
+    #videos-pratica {
+      background: #FFFDF9;
+      padding: 38px 0;
+      border-top: 1px solid #E6E0D6;
+    }
+
+    .pill-videos-pratica {
+      background: #FF6B4A;
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .title-videos-pratica {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.75rem;
+      line-height: 1.14;
+      color: #1E1B2E;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .sub-videos-pratica {
+      color: #57526E;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .videos-grid-ref {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 6px;
+    }
+
+    .videos-grid-ref::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .videos-grid-ref {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        overflow-x: visible;
+        padding-bottom: 0;
+      }
+    }
+
+    .video-card-ref {
+      background: #FFFFFF;
+      border: 2px solid #1E1B2E;
+      border-radius: 18px;
+      box-shadow: 4px 4px 0px #1E1B2E;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      flex: 0 0 74%;
+      scroll-snap-align: start;
+    }
+
+    @media (min-width: 768px) {
+      .video-card-ref {
+        flex: none;
+      }
+    }
+
+    .video-frame-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 15;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1.5px solid #1E1B2E;
+      background: #1D1A2B;
+      margin-bottom: 10px;
+    }
+
+    .video-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #FBBF24;
+      border: 1.5px solid #1E1B2E;
+      color: #1E1B2E;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      z-index: 4;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .demo-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      background: #1D1A2B;
+    }
+
+    .video-play-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #FBBF24;
+      border: 2px solid #1E1B2E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      transition: transform 0.15s ease, background 0.15s ease;
+      padding: 0;
+    }
+
+    .video-play-overlay:hover,
+    .video-play-overlay:active {
+      transform: translate(-50%, -50%) scale(1.08);
+      background: #FF6B4A;
+    }
+
+    .video-play-overlay svg {
+      margin-left: 3px;
+    }
+
+    .video-card-caption h4 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 0.98rem;
+      color: #1E1B2E;
+      margin-bottom: 4px;
+    }
+
+    .video-card-caption p {
+      font-size: 0.8rem;
+      line-height: 1.38;
+      color: #57526E;
+      margin: 0;
+    }
+
+    .videos-hint {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #8C859E;
+      margin-top: 10px;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .videos-hint {
+        display: none;
+      }
+    }
+
     /* THERMAL RECEIPT ANCHOR ("FAZ A CONTA COMIGO") */
     .receipt {
       background: #FFFDF7;
@@ -1125,11 +1303,6 @@
           <span>Animadas em casa</span>
         </div>
       </div>
-
-      <a href="#oferta" class="btn-cta">
-        QUERO O KIT COMPLETO POR R$ 17,99
-        <small>Acesso imediato no Pix ou Cartão • Pagamento único</small>
-      </a>
 
       <div class="trust-strip">
         <span>⚡ Acesso imediato</span>
@@ -1552,7 +1725,73 @@
     </div>
   </section>
 
-  <!-- DOBRA 7: CUPOM FISCAL DE ANCORAGEM + OFERTA R$ 17,99 -->
+  <!-- =========================================================================
+       DOBRA: VÍDEOS DE DEMONSTRAÇÃO E PROVA VISUAL (#videos-pratica)
+  ========================================================================== -->
+  <section id="videos-pratica">
+    <div class="container">
+      <div class="section-header-left">
+        <span class="pill-videos-pratica">VEJA NA PRÁTICA</span>
+        <h2 class="title-videos-pratica">Olha como fica pronto e a reação deles</h2>
+        <p class="sub-videos-pratica">Aperte o play para ver o passo a passo e as crianças brincando longe das telas.</p>
+      </div>
+
+      <div class="videos-grid-ref">
+        <!-- CARD 1: PASSO A PASSO -->
+        <article class="video-card-ref">
+          <div class="video-frame-container">
+            <span class="video-badge">PASSO A PASSO</span>
+            <video class="demo-video" src="https://pub-381dd310173b42cea18ea2f8a65c05ca.r2.dev/Sazonais/1124(1).mp4#t=0.1" preload="metadata" playsinline controls></video>
+            <button class="video-play-overlay" type="button" aria-label="Reproduzir vídeo passo a passo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#1E1B2E">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+            </button>
+          </div>
+          <div class="video-card-caption">
+            <h4>Montando do zero em casa</h4>
+            <p>Veja como é simples recortar, montar e deixar pronto para brincar.</p>
+          </div>
+        </article>
+
+        <!-- CARD 2: POR DENTRO DO KIT -->
+        <article class="video-card-ref">
+          <div class="video-frame-container">
+            <span class="video-badge">POR DENTRO DO KIT</span>
+            <video class="demo-video" src="https://pub-381dd310173b42cea18ea2f8a65c05ca.r2.dev/Sazonais/1124(2).mp4#t=0.1" preload="metadata" playsinline controls></video>
+            <button class="video-play-overlay" type="button" aria-label="Reproduzir vídeo por dentro do kit">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#1E1B2E">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+            </button>
+          </div>
+          <div class="video-card-caption">
+            <h4>Olha o resultado na mão</h4>
+            <p>Acabamento fofinho, cores vivas e atividades que prendem a atenção.</p>
+          </div>
+        </article>
+
+        <!-- CARD 3: DIVERSÃO REAL -->
+        <article class="video-card-ref">
+          <div class="video-frame-container">
+            <span class="video-badge">DIVERSÃO REAL</span>
+            <video class="demo-video" src="https://pub-381dd310173b42cea18ea2f8a65c05ca.r2.dev/Sazonais/1124.mp4#t=0.1" preload="metadata" playsinline controls></video>
+            <button class="video-play-overlay" type="button" aria-label="Reproduzir vídeo diversão real">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#1E1B2E">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+            </button>
+          </div>
+          <div class="video-card-caption">
+            <h4>Criança entretida sem celular</h4>
+            <p>Brinquedinhos que tomam atenção das crianças, prático e rápido de criar!</p>
+          </div>
+        </article>
+      </div>
+
+      <span class="videos-hint">👈 Deslize para ver os 3 vídeos</span>
+    </div>
+  </section>
   <section class="section-dark" id="oferta">
     <div class="container">
       <h2 class="section-title">Faz a conta comigo</h2>
@@ -1594,7 +1833,7 @@
           <div class="receipt-price">R$ 17,99</div>
           <div class="receipt-unit">Pagamento único • Sem mensalidade</div>
 
-          <a href="#" class="btn-cta js-checkout-btn">
+          <a href="https://loja.semtellas.online/checkout/v5/Dr3DrsHJHoK2K2F0xWiUbB" class="btn-cta btn-checkout js-checkout-btn">
             QUERO O KIT POR R$ 17,99
             <small>Liberação automática via Pix ou Cartão</small>
           </a>
@@ -1642,7 +1881,7 @@
         <span>Kit Completo • Acesso Imediato</span>
         <strong>R$ 17,99</strong>
       </div>
-      <a href="#oferta" class="sticky-btn">QUERO O KIT AGORA</a>
+      <a href="#videos-pratica" class="sticky-btn">QUERO O KIT AGORA</a>
     </div>
   </div>
 
@@ -1657,27 +1896,65 @@
 
   <script>
     // =========================================================================
-    // 1. CONFIGURAÇÃO DO CHECKOUT (COLE AQUI O LINK DO SEU CHECKOUT DE R$ 17,99)
+    // 1. CONFIGURAÇÃO DO CHECKOUT OFICIAL GG CHECKOUT + UTMS + PIXEL
     // =========================================================================
-    const CHECKOUT_URL = "https://SEU-CHECKOUT-AQUI.com.br";
+    const CHECKOUT_URL = "https://loja.semtellas.online/checkout/v5/Dr3DrsHJHoK2K2F0xWiUbB";
+    const CHECKOUT_PIXEL_DATA = {
+      content_name: "Kit Férias sem Telas",
+      content_ids: ["kit-ferias-sem-telas"],
+      content_type: "product",
+      value: 17.99,
+      currency: "BRL"
+    };
+    let addToCartTracked = false;
 
     function buildCheckoutUrl() {
-      if (CHECKOUT_URL.includes("SEU-CHECKOUT-AQUI")) return "#oferta";
       const currentParams = window.location.search;
       if (!currentParams) return CHECKOUT_URL;
+      const cleanParams = currentParams.startsWith("?") ? currentParams.substring(1) : currentParams;
+      if (!cleanParams) return CHECKOUT_URL;
       const separator = CHECKOUT_URL.includes("?") ? "&" : "?";
-      return CHECKOUT_URL + separator + currentParams.substring(1);
+      return CHECKOUT_URL + separator + cleanParams;
     }
 
-    document.querySelectorAll(".js-checkout-btn").forEach((btn) => {
-      btn.setAttribute("href", buildCheckoutUrl());
-      btn.addEventListener("click", function () {
-        // META PIXEL: InitiateCheckout (Descomente quando ativar o Pixel)
-        // if (typeof fbq === "function") {
-        //   fbq("track", "InitiateCheckout", { value: 17.99, currency: "BRL" });
-        // }
-      });
+    // Atualiza o href dos botões de checkout antecipadamente com as UTMs da visita
+    document.querySelectorAll('.btn-checkout, #oferta .btn-cta, a[href*="loja.semtellas.online"]').forEach((btn) => {
+      const rawHref = (btn.getAttribute("href") || "").trim();
+      if (!rawHref.startsWith("#")) {
+        btn.setAttribute("href", buildCheckoutUrl());
+      }
     });
+
+    // Captura global delegada no document para garantir disparo do Pixel antes do redirecionamento
+    document.addEventListener("click", function (e) {
+      const target = e.target.closest("a, button");
+      if (!target) return;
+
+      const rawHref = (target.getAttribute("href") || "").trim();
+      if (rawHref.startsWith("#")) return;
+
+      const isCheckoutTarget =
+        rawHref.includes("loja.semtellas.online") ||
+        target.matches(".btn-checkout, #oferta .btn-cta");
+
+      if (!isCheckoutTarget) return;
+
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      if (typeof fbq === "function") {
+        if (!addToCartTracked) {
+          fbq("track", "AddToCart", CHECKOUT_PIXEL_DATA);
+          addToCartTracked = true;
+        }
+        fbq("track", "InitiateCheckout", CHECKOUT_PIXEL_DATA);
+      }
+
+      const finalUrl = buildCheckoutUrl();
+      setTimeout(() => {
+        window.location.href = finalUrl;
+      }, 300);
+    }, true);
 
     // =========================================================================
     // 2. TROCA DE ABAS (SQUISHIES / DESENHOS / BRINCADEIRAS)
@@ -1781,6 +2058,67 @@
     document.querySelectorAll(".faq-question").forEach((question) => {
       question.addEventListener("click", () => {
         question.parentElement.classList.toggle("open");
+      });
+    });
+
+    // =========================================================================
+    // 6. CONTROLE INTELIGENTE DOS VÍDEOS (#videos-pratica) + META PIXEL
+    // =========================================================================
+    const demoVideos = document.querySelectorAll(".demo-video");
+    let videoViewContentTracked = false;
+
+    function trackVideoViewContent() {
+      if (!videoViewContentTracked && typeof fbq === "function") {
+        fbq("track", "ViewContent", {
+          content_name: "Demonstração em Vídeo - Kit Férias sem Telas",
+          content_ids: ["kit-ferias-sem-telas"],
+          content_type: "product",
+          value: 17.99,
+          currency: "BRL"
+        });
+        videoViewContentTracked = true;
+      }
+    }
+
+    demoVideos.forEach((video) => {
+      const container = video.closest(".video-frame-container");
+      const overlayBtn = container ? container.querySelector(".video-play-overlay") : null;
+
+      // Clique no botão central de play flutuante
+      if (overlayBtn) {
+        overlayBtn.addEventListener("click", () => {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      }
+
+      // Ao iniciar a reprodução
+      video.addEventListener("play", () => {
+        // 1. Pausa outros vídeos para não misturar áudio
+        demoVideos.forEach((otherVideo) => {
+          if (otherVideo !== video && !otherVideo.paused) {
+            otherVideo.pause();
+          }
+        });
+
+        // 2. Oculta o botão flutuante de play
+        if (overlayBtn) overlayBtn.style.display = "none";
+
+        // 3. Dispara evento ViewContent no Meta Pixel na primeira interação
+        trackVideoViewContent();
+      });
+
+      // Ao pausar, reexibe o botão de play
+      video.addEventListener("pause", () => {
+        if (overlayBtn) overlayBtn.style.display = "flex";
+      });
+
+      // Ao terminar, reexibe o botão de play
+      video.addEventListener("ended", () => {
+        if (overlayBtn) overlayBtn.style.display = "flex";
       });
     });
   </script>
