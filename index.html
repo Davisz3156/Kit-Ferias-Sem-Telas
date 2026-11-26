@@ -1789,7 +1789,7 @@
           </div>
           <div class="video-card-caption">
             <h4>Criança entretida sem celular</h4>
-            <p>Horas de brincadeira criativa longe das telas dentro de casa.</p>
+            <p>Brinquedinhos que tomam atenção das crianças, prático e rápido de criar!</p>
           </div>
         </article>
       </div>
@@ -1904,6 +1904,14 @@
     // 1. CONFIGURAÇÃO DO CHECKOUT OFICIAL GG CHECKOUT + UTMS + PIXEL
     // =========================================================================
     const CHECKOUT_URL = "https://loja.semtellas.online/checkout/v5/Dr3DrsHJHoK2K2F0xWiUbB";
+    const CHECKOUT_PIXEL_DATA = {
+      content_name: "Kit Férias sem Telas",
+      content_ids: ["kit-ferias-sem-telas"],
+      content_type: "product",
+      value: 17.99,
+      currency: "BRL"
+    };
+    let addToCartTracked = false;
 
     function buildCheckoutUrl() {
       const currentParams = window.location.search;
@@ -1914,31 +1922,44 @@
       return CHECKOUT_URL + separator + cleanParams;
     }
 
-    // Vincular botões de checkout para disparo de Pixel, repasse de UTMs e redirecionamento
-    const checkoutButtons = document.querySelectorAll('.btn-checkout, a[href*="loja.semtellas.online"]');
-    checkoutButtons.forEach((btn) => {
-      btn.setAttribute("href", buildCheckoutUrl());
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        const finalUrl = buildCheckoutUrl();
-
-        // 1. Disparar InitiateCheckout no Meta Pixel
-        if (typeof fbq === "function") {
-          fbq("track", "InitiateCheckout", {
-            content_name: "Kit Férias sem Telas",
-            content_ids: ["kit-ferias-sem-telas"],
-            content_type: "product",
-            value: 17.99,
-            currency: "BRL"
-          });
-        }
-
-        // 2 & 3. Redirecionar com parâmetros de URL após 180ms
-        setTimeout(() => {
-          window.location.href = finalUrl;
-        }, 180);
-      });
+    // Atualiza o href dos botões de checkout antecipadamente com as UTMs da visita
+    document.querySelectorAll('.btn-checkout, #oferta .btn-cta, .sticky-bar a, a[href*="loja.semtellas.online"]').forEach((btn) => {
+      const rawHref = (btn.getAttribute("href") || "").trim();
+      if (rawHref !== "#oferta") {
+        btn.setAttribute("href", buildCheckoutUrl());
+      }
     });
+
+    // Captura global delegada no document para garantir disparo do Pixel antes do redirecionamento
+    document.addEventListener("click", function (e) {
+      const target = e.target.closest("a, button");
+      if (!target) return;
+
+      const rawHref = (target.getAttribute("href") || "").trim();
+      if (rawHref === "#oferta") return;
+
+      const isCheckoutTarget =
+        rawHref.includes("loja.semtellas.online") ||
+        target.matches(".btn-checkout, #oferta .btn-cta, .sticky-bar a");
+
+      if (!isCheckoutTarget) return;
+
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      if (typeof fbq === "function") {
+        if (!addToCartTracked) {
+          fbq("track", "AddToCart", CHECKOUT_PIXEL_DATA);
+          addToCartTracked = true;
+        }
+        fbq("track", "InitiateCheckout", CHECKOUT_PIXEL_DATA);
+      }
+
+      const finalUrl = buildCheckoutUrl();
+      setTimeout(() => {
+        window.location.href = finalUrl;
+      }, 300);
+    }, true);
 
     // =========================================================================
     // 2. TROCA DE ABAS (SQUISHIES / DESENHOS / BRINCADEIRAS)
