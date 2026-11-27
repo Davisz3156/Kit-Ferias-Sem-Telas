@@ -14,19 +14,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- =====================================================================
-       META PIXEL BASE (ID: 2153911028584475)
+       META PIXEL BASE BLINDADO (ID: 2153911028584475)
   ====================================================================== -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2153911028584475');
-    fbq('track', 'PageView');
+    (function () {
+      if (window.__metaPixel2153911028584475Init) return;
+      window.__metaPixel2153911028584475Init = true;
+
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      var pvEventId = 'pv_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+      fbq('init', '2153911028584475');
+      fbq('track', 'PageView', {}, { eventID: pvEventId });
+    })();
   </script>
   <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2153911028584475&ev=PageView&noscript=1" />
@@ -70,7 +77,7 @@
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      padding-bottom: 74px; /* Espaço para barra fixa mobile */
+      padding-bottom: 74px;
     }
 
     h1, h2, h3, .font-display {
@@ -443,7 +450,7 @@
       box-shadow: 0 6px 16px rgba(30, 27, 46, 0.06);
     }
 
-    /* 4:3 IMAGE CONTAINERS & ENQUADRAMENTO RESPONSIVO */
+    /* 4:3 IMAGE CONTAINERS */
     .slide-img-box {
       width: 100%;
       aspect-ratio: 4 / 3;
@@ -550,9 +557,7 @@
       display: block;
     }
 
-    /* =========================================================================
-       1. SEÇÃO "COMO FUNCIONA" (MODELADA FIELMENTE NA REFERÊNCIA)
-    ========================================================================== */
+    /* SEÇÃO "COMO FUNCIONA" */
     .section-header-left {
       text-align: left;
       margin-bottom: 22px;
@@ -702,9 +707,7 @@
       color: var(--text-muted-dark);
     }
 
-    /* =========================================================================
-       2. SEÇÃO DE BÔNUS (GRADE NEOBRUTALISTA COM CAPA VERTICAL DA REFERÊNCIA)
-    ========================================================================== */
+    /* SEÇÃO DE BÔNUS */
     .pill-bonus-ref {
       background: #1E1B2E;
       color: #FFFFFF;
@@ -740,7 +743,6 @@
       }
     }
 
-    /* No mobile, centraliza o 3º card de forma equilibrada */
     @media (max-width: 767px) {
       .bonus-card-ref:nth-child(3) {
         grid-column: 1 / -1;
@@ -850,9 +852,7 @@
       display: inline-block;
     }
 
-    /* =========================================================================
-       DOBRA: VÍDEOS DE DEMONSTRAÇÃO E PROVA VISUAL (#videos-pratica)
-    ========================================================================== */
+    /* DOBRA: VÍDEOS DE DEMONSTRAÇÃO E PROVA VISUAL (#videos-pratica) */
     #videos-pratica {
       background: #FFFDF9;
       padding: 38px 0;
@@ -1270,7 +1270,7 @@
 </head>
 <body>
 
-  <!-- FAIXA ANIMADA TOPO (TODAS AS BRINCADEIRAS E ATIVIDADES) -->
+  <!-- FAIXA ANIMADA TOPO -->
   <div class="marquee-bar" aria-hidden="true">
     <div class="marquee-track">
       🧸 SQUISHY DE PAPEL DE APERTAR • 🎨 DESENHOS ATUAIS PARA PINTAR • 🎲 BRINCADEIRAS ANIMADAS • 🏪 KIT LOJINHA DE FAZ DE CONTA • 🏅 QUADRO DE MISSÕES • 🧩 PASSATEMPOS VISUAIS • ☀️ FÉRIAS SEM TELAS • &nbsp;&nbsp;&nbsp;
@@ -1349,9 +1349,7 @@
         </button>
       </div>
 
-      <!-- ===================================================================
-           ABA 1: SQUISHY DE PAPEL (CARROSSEL DE IMAGENS)
-      ==================================================================== -->
+      <!-- ABA 1: SQUISHY DE PAPEL -->
       <div class="tab-panel active" id="panel-squishy">
         <div class="panel-intro">
           <h3>🧸 Como Fazer: Squishy (Brinquedo de Papel de Apertar)</h3>
@@ -1363,7 +1361,6 @@
           <button class="carousel-nav next" type="button" onclick="scrollCarousel('track-squishy', 1)" aria-label="Próximo slide">›</button>
 
           <div class="carousel-track" id="track-squishy">
-            <!-- SLIDE 1 SQUISHY (PRIMEIRA IMAGEM CARREGA IMEDIATAMENTE) -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Molde + Passo a Passo</span>
@@ -1375,7 +1372,6 @@
               </div>
             </div>
 
-            <!-- SLIDE 2 SQUISHY -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Super Macio</span>
@@ -1387,7 +1383,6 @@
               </div>
             </div>
 
-            <!-- SLIDE 3 SQUISHY -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Preto e Branco + Colorido</span>
@@ -1399,7 +1394,6 @@
               </div>
             </div>
 
-            <!-- SLIDE 4 SQUISHY -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Guia Visual</span>
@@ -1423,7 +1417,6 @@
           </div>
         </div>
 
-        <!-- MINI PASSO A PASSO DO SQUISHY -->
         <div class="squishy-steps">
           <div class="sq-step"><span>🖨️</span><strong>1. Imprima</strong></div>
           <div class="sq-step"><span>🖍️</span><strong>2. Pinte</strong></div>
@@ -1432,9 +1425,7 @@
         </div>
       </div>
 
-      <!-- ===================================================================
-           ABA 2: DESENHOS ATUAIS PARA PINTAR (CARROSSEL DE IMAGENS)
-      ==================================================================== -->
+      <!-- ABA 2: DESENHOS ATUAIS PARA PINTAR -->
       <div class="tab-panel" id="panel-desenhos">
         <div class="panel-intro">
           <h3>🎨 Desenhos Atuais para Pintar</h3>
@@ -1446,7 +1437,6 @@
           <button class="carousel-nav next" type="button" onclick="scrollCarousel('track-desenhos', 1)" aria-label="Próximo slide">›</button>
 
           <div class="carousel-track" id="track-desenhos">
-            <!-- SLIDE 1 DESENHOS -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Estilo Atual</span>
@@ -1458,7 +1448,6 @@
               </div>
             </div>
 
-            <!-- SLIDE 2 DESENHOS -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Aventura & Fantasia</span>
@@ -1470,7 +1459,6 @@
               </div>
             </div>
 
-            <!-- SLIDE 3 DESENHOS -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Criatividade</span>
@@ -1494,9 +1482,7 @@
         </div>
       </div>
 
-      <!-- ===================================================================
-           ABA 3: BRINCADEIRAS ANIMADAS & ATIVIDADES
-      ==================================================================== -->
+      <!-- ABA 3: BRINCADEIRAS ANIMADAS & ATIVIDADES -->
       <div class="tab-panel" id="panel-brincadeiras">
         <div class="panel-intro">
           <h3>🎲 Brincadeiras Animadas que Prendem a Atenção</h3>
@@ -1508,7 +1494,6 @@
           <button class="carousel-nav next" type="button" onclick="scrollCarousel('track-brincadeiras', 1)" aria-label="Próximo slide">›</button>
 
           <div class="carousel-track" id="track-brincadeiras">
-            <!-- SLIDE 1 BRINCADEIRAS -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Ação & Movimento</span>
@@ -1520,7 +1505,6 @@
               </div>
             </div>
 
-            <!-- SLIDE 2 BRINCADEIRAS -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Gasta Energia</span>
@@ -1532,7 +1516,6 @@
               </div>
             </div>
 
-            <!-- SLIDE 3 BRINCADEIRAS -->
             <div class="carousel-slide">
               <div class="slide-img-box">
                 <span class="slide-badge">Em Família</span>
@@ -1558,9 +1541,7 @@
     </div>
   </section>
 
-  <!-- =========================================================================
-       DOBRA 4: COMO FUNCIONA (MODELADO FIELMENTE NA REFERÊNCIA)
-  ========================================================================== -->
+  <!-- DOBRA 4: COMO FUNCIONA -->
   <section class="section-dark" id="como-funciona">
     <div class="container">
       <div class="section-header-left">
@@ -1570,7 +1551,6 @@
       </div>
 
       <div class="steps-grid-pastel">
-        <!-- CARD 1 -->
         <div class="step-card-pastel card-yellow">
           <div class="step-card-top">
             <span class="step-num-outline">1</span>
@@ -1584,7 +1564,6 @@
           </div>
         </div>
 
-        <!-- CARD 2 -->
         <div class="step-card-pastel card-pink">
           <div class="step-card-top">
             <span class="step-num-outline">2</span>
@@ -1598,7 +1577,6 @@
           </div>
         </div>
 
-        <!-- CARD 3 -->
         <div class="step-card-pastel card-green">
           <div class="step-card-top">
             <span class="step-num-outline">3</span>
@@ -1612,7 +1590,6 @@
           </div>
         </div>
 
-        <!-- CARD 4 -->
         <div class="step-card-pastel card-purple">
           <div class="step-card-top">
             <span class="step-num-outline">4</span>
@@ -1642,7 +1619,7 @@
 
       <div class="objection-card">
         <h3>2. “É difícil fazer os Squishies de papel?”</h3>
-        <p>Não! Os moldes já vêm prontos no tamanho certo. Basta imprimir, pintar, passar fita adesiva transparente para dar o brilho, recortar as bordas e rechear com algodão ou sacolinha plástica.</p>
+        <p>Não! Os moldes já vêm prontos no tamanho certo. Basta imprimir, pintar, passar fita transparente para dar o brilho, recortar as bordas e rechear com algodão ou sacolinha plástica.</p>
       </div>
 
       <div class="objection-card">
@@ -1666,9 +1643,7 @@
     </div>
   </section>
 
-  <!-- =========================================================================
-       DOBRA: SEÇÃO DE BÔNUS (GRADE NEOBRUTALISTA COM CAPA VERTICAL DA REFERÊNCIA)
-  ========================================================================== -->
+  <!-- DOBRA: SEÇÃO DE BÔNUS -->
   <section class="section-soft" id="bonus">
     <div class="container">
       <div class="section-header-left">
@@ -1677,7 +1652,6 @@
       </div>
 
       <div class="bonus-grid-ref">
-        <!-- BÔNUS 1 -->
         <article class="bonus-card-ref">
           <div class="bonus-cover-frame">
             <span class="bonus-promo-badge">BÔNUS 1</span>
@@ -1692,7 +1666,6 @@
           </div>
         </article>
 
-        <!-- BÔNUS 2 -->
         <article class="bonus-card-ref">
           <div class="bonus-cover-frame">
             <span class="bonus-promo-badge">BÔNUS 2</span>
@@ -1707,7 +1680,6 @@
           </div>
         </article>
 
-        <!-- BÔNUS 3 -->
         <article class="bonus-card-ref">
           <div class="bonus-cover-frame">
             <span class="bonus-promo-badge">BÔNUS 3</span>
@@ -1725,9 +1697,7 @@
     </div>
   </section>
 
-  <!-- =========================================================================
-       DOBRA: VÍDEOS DE DEMONSTRAÇÃO E PROVA VISUAL (#videos-pratica)
-  ========================================================================== -->
+  <!-- DOBRA: VÍDEOS DE DEMONSTRAÇÃO E PROVA VISUAL (#videos-pratica) -->
   <section id="videos-pratica">
     <div class="container">
       <div class="section-header-left">
@@ -1737,7 +1707,6 @@
       </div>
 
       <div class="videos-grid-ref">
-        <!-- CARD 1: PASSO A PASSO -->
         <article class="video-card-ref">
           <div class="video-frame-container">
             <span class="video-badge">PASSO A PASSO</span>
@@ -1754,7 +1723,6 @@
           </div>
         </article>
 
-        <!-- CARD 2: POR DENTRO DO KIT -->
         <article class="video-card-ref">
           <div class="video-frame-container">
             <span class="video-badge">POR DENTRO DO KIT</span>
@@ -1771,7 +1739,6 @@
           </div>
         </article>
 
-        <!-- CARD 3: DIVERSÃO REAL -->
         <article class="video-card-ref">
           <div class="video-frame-container">
             <span class="video-badge">DIVERSÃO REAL</span>
@@ -1792,6 +1759,8 @@
       <span class="videos-hint">👈 Deslize para ver os 3 vídeos</span>
     </div>
   </section>
+
+  <!-- DOBRA 7: OFERTA E RECEIPT -->
   <section class="section-dark" id="oferta">
     <div class="container">
       <h2 class="section-title">Faz a conta comigo</h2>
@@ -1874,7 +1843,7 @@
     </div>
   </section>
 
-  <!-- BARRA FIXA MOBILE (APARECE AO ROLAR A PÁGINA) -->
+  <!-- BARRA FIXA MOBILE -->
   <div class="sticky-bar" id="sticky-bar">
     <div class="sticky-inner">
       <div class="sticky-price-info">
@@ -1896,28 +1865,52 @@
 
   <script>
     // =========================================================================
-    // 1. CONFIGURAÇÃO DO CHECKOUT OFICIAL GG CHECKOUT + UTMS + PIXEL
+    // 1. CONFIGURAÇÃO DO CHECKOUT OFICIAL GG CHECKOUT + UTMS + FBCLID + PIXEL
     // =========================================================================
     const CHECKOUT_URL = "https://loja.semtellas.online/checkout/v5/Dr3DrsHJHoK2K2F0xWiUbB";
     const CHECKOUT_PIXEL_DATA = {
-      content_name: "Kit Férias sem Telas",
       content_ids: ["kit-ferias-sem-telas"],
       content_type: "product",
+      num_items: 1,
       value: 17.99,
       currency: "BRL"
     };
-    let addToCartTracked = false;
 
-    function buildCheckoutUrl() {
-      const currentParams = window.location.search;
-      if (!currentParams) return CHECKOUT_URL;
-      const cleanParams = currentParams.startsWith("?") ? currentParams.substring(1) : currentParams;
-      if (!cleanParams) return CHECKOUT_URL;
-      const separator = CHECKOUT_URL.includes("?") ? "&" : "?";
-      return CHECKOUT_URL + separator + cleanParams;
+    let addToCartTracked = false;
+    let checkoutRedirectInProgress = false;
+
+    function generateEventId(prefix) {
+      return prefix + "_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9);
     }
 
-    // Atualiza o href dos botões de checkout antecipadamente com as UTMs da visita
+    function getCookieValue(name) {
+      const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+      return match ? decodeURIComponent(match[2]) : "";
+    }
+
+    function buildCheckoutUrl() {
+      const targetUrl = new URL(CHECKOUT_URL);
+      const currentParams = new URLSearchParams(window.location.search);
+
+      currentParams.forEach((value, key) => {
+        if (value) targetUrl.searchParams.set(key, value);
+      });
+
+      // Recupera fbclid do cookie _fbc se não estiver explícito na URL
+      if (!targetUrl.searchParams.has("fbclid")) {
+        const fbcCookie = getCookieValue("_fbc");
+        if (fbcCookie) {
+          const parts = fbcCookie.split(".");
+          if (parts.length >= 4 && parts[3]) {
+            targetUrl.searchParams.set("fbclid", parts[3]);
+          }
+        }
+      }
+
+      return targetUrl.toString();
+    }
+
+    // Atualiza o href dos botões de checkout antecipadamente com UTMs + fbclid
     document.querySelectorAll('.btn-checkout, #oferta .btn-cta, a[href*="loja.semtellas.online"]').forEach((btn) => {
       const rawHref = (btn.getAttribute("href") || "").trim();
       if (!rawHref.startsWith("#")) {
@@ -1925,7 +1918,7 @@
       }
     });
 
-    // Captura global delegada no document para garantir disparo do Pixel antes do redirecionamento
+    // Captura global delegada no document para garantir disparo completo antes do redirect
     document.addEventListener("click", function (e) {
       const target = e.target.closest("a, button");
       if (!target) return;
@@ -1942,18 +1935,36 @@
       e.preventDefault();
       e.stopImmediatePropagation();
 
+      if (checkoutRedirectInProgress) return;
+      checkoutRedirectInProgress = true;
+
+      const icEventId = generateEventId("ic");
+
       if (typeof fbq === "function") {
         if (!addToCartTracked) {
-          fbq("track", "AddToCart", CHECKOUT_PIXEL_DATA);
+          fbq("track", "AddToCart", CHECKOUT_PIXEL_DATA, { eventID: generateEventId("atc") });
           addToCartTracked = true;
         }
-        fbq("track", "InitiateCheckout", CHECKOUT_PIXEL_DATA);
+        fbq("track", "InitiateCheckout", CHECKOUT_PIXEL_DATA, { eventID: icEventId });
       }
+
+      // Beacon auxiliar para evitar perda do InitiateCheckout em navegadores in-app (Instagram/Facebook)
+      try {
+        const beaconUrl =
+          "https://www.facebook.com/tr?id=2153911028584475&ev=InitiateCheckout" +
+          "&cd[value]=17.99&cd[currency]=BRL&cd[content_type]=product" +
+          "&eid=" + encodeURIComponent(icEventId) +
+          "&dl=" + encodeURIComponent(window.location.href) +
+          "&noscript=1";
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(beaconUrl);
+        }
+      } catch (err) {}
 
       const finalUrl = buildCheckoutUrl();
       setTimeout(() => {
         window.location.href = finalUrl;
-      }, 300);
+      }, 550);
     }, true);
 
     // =========================================================================
@@ -1975,11 +1986,6 @@
           activePanel.classList.add("active");
           updateCarouselDots("track-" + target, "dots-" + target);
         }
-
-        // META PIXEL: ViewContent ao explorar as abas
-        // if (typeof fbq === "function") {
-        //   fbq("track", "ViewContent", { content_name: "Aba " + target });
-        // }
       });
     });
 
@@ -1993,7 +1999,6 @@
       const slideWidth = slide ? slide.offsetWidth : 260;
       const step = slideWidth + 12;
 
-      // Loop rotativo
       if (direction === 1 && (track.scrollLeft + track.clientWidth >= track.scrollWidth - 15)) {
         track.scrollTo({ left: 0, behavior: "smooth" });
       } else if (direction === -1 && track.scrollLeft <= 15) {
@@ -2026,7 +2031,6 @@
       track.scrollTo({ left: index * step, behavior: "smooth" });
     }
 
-    // Ouvintes de rolagem sincronizados para atualizar as bolinhas indicadoras
     ["squishy", "desenhos", "brincadeiras"].forEach((name) => {
       const track = document.getElementById("track-" + name);
       if (track) {
@@ -2070,12 +2074,11 @@
     function trackVideoViewContent() {
       if (!videoViewContentTracked && typeof fbq === "function") {
         fbq("track", "ViewContent", {
-          content_name: "Demonstração em Vídeo - Kit Férias sem Telas",
           content_ids: ["kit-ferias-sem-telas"],
           content_type: "product",
           value: 17.99,
           currency: "BRL"
-        });
+        }, { eventID: generateEventId("vc") });
         videoViewContentTracked = true;
       }
     }
@@ -2084,7 +2087,6 @@
       const container = video.closest(".video-frame-container");
       const overlayBtn = container ? container.querySelector(".video-play-overlay") : null;
 
-      // Clique no botão central de play flutuante
       if (overlayBtn) {
         overlayBtn.addEventListener("click", () => {
           if (video.paused) {
@@ -2095,28 +2097,21 @@
         });
       }
 
-      // Ao iniciar a reprodução
       video.addEventListener("play", () => {
-        // 1. Pausa outros vídeos para não misturar áudio
         demoVideos.forEach((otherVideo) => {
           if (otherVideo !== video && !otherVideo.paused) {
             otherVideo.pause();
           }
         });
 
-        // 2. Oculta o botão flutuante de play
         if (overlayBtn) overlayBtn.style.display = "none";
-
-        // 3. Dispara evento ViewContent no Meta Pixel na primeira interação
         trackVideoViewContent();
       });
 
-      // Ao pausar, reexibe o botão de play
       video.addEventListener("pause", () => {
         if (overlayBtn) overlayBtn.style.display = "flex";
       });
 
-      // Ao terminar, reexibe o botão de play
       video.addEventListener("ended", () => {
         if (overlayBtn) overlayBtn.style.display = "flex";
       });
